@@ -154,3 +154,13 @@ Console.WriteLine("The Product is {0}", Averagenum); //Output 362880 ((((((((1*2
 string[] charlist = { "a", "b", "c", "d" };
 var concta = charlist.Aggregate((a, b) => a + ',' + b);
 Console.WriteLine("Concatenated String: {0}", concta);
+
+Students.studentMethod();
+
+
+  
+    
+   
+
+
+
