@@ -77,3 +77,80 @@ var result1 = Num.Where(x => x > 3);
 Console.WriteLine(  result1);
 foreach(var x in result1)
 { Console.WriteLine(x); }
+Console.WriteLine("&&&&&&&&");
+
+int[] Nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//LINQ Method Syntax to Print Numbers Greater than 3
+IEnumerable<int> results = Num.Where(n => n > 3).ToList();
+foreach(var x in results)
+{ Console.WriteLine(x); }
+Console.WriteLine("&&&&&&&&");
+List<string> countries = new List<string>();
+countries.Add("India");
+countries.Add("US");
+countries.Add("Australia");
+countries.Add("Russia");
+IEnumerable<string> resultlist = countries.Select(x => x);
+foreach (var item in resultlist)
+{
+    Console.WriteLine(item);
+}
+//Console.ReadLine();
+int[] numbers1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+Console.WriteLine("Below are the even numbers");
+Console.WriteLine("");
+IEnumerable<int> evennumber = numbers1.Where(x => x % 2 == 0);
+foreach (var item in evennumber)
+{
+    Console.WriteLine(item + " is an even number");
+}
+Console.WriteLine("--------------------------------------------------");
+Console.WriteLine("Below are the Odd numbers");
+Console.WriteLine("");
+IEnumerable<int> oddnumber = numbers1.Where(x => x % 2 != 0);
+foreach (var item in oddnumber)
+{
+    Console.WriteLine(item + " is an odd number");
+}
+//Console.ReadLine();
+Console.WriteLine("--------------------------------------------------");
+int[] Num1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int minimumNum = Num1.Min();
+Console.WriteLine(minimumNum);
+int[] Num3 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Console.WriteLine("The Minimum value in the given array is:");
+int minimumNums3 = Num3.Min();
+Console.WriteLine("The minimum Number is {0}", minimumNums3);
+Console.WriteLine("--------------------------------------------------");
+int[] Num4 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Console.WriteLine("The Maximum value in the given array is:");
+int maximumNum = Num4.Max();
+Console.WriteLine("The maximum Number is {0}", maximumNum);
+//Console.ReadLine();
+//Console.ReadLine();
+Console.WriteLine("--------------------------------------------------");
+int[] Numsum = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int Sum = Numsum.Sum();
+
+int[] Numn = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Console.WriteLine("Calculating the sum of all the elements of the array :");
+int Sumn = Numn.Sum();
+Console.WriteLine("The Sum is {0}", Sumn);
+
+int[] Num12 = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int Count = Num12.Count();
+Console.WriteLine("The count is {0}", Count);
+
+
+int[] Numavg = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Console.WriteLine("Find the average of the elements:");
+double Average = Numavg.Average();
+Console.WriteLine("The Average is {0}", Average);
+
+int[] Numavgs = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+Console.WriteLine("Find the Product of the elements:");
+double Averagenum = Numavgs.Aggregate((a, b) => a * b);
+Console.WriteLine("The Product is {0}", Averagenum); //Output 362880 ((((((((1*2)*3)*4)*5)*6)*7)*8)*9)
+string[] charlist = { "a", "b", "c", "d" };
+var concta = charlist.Aggregate((a, b) => a + ',' + b);
+Console.WriteLine("Concatenated String: {0}", concta);
