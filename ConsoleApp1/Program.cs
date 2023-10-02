@@ -156,11 +156,29 @@ var concta = charlist.Aggregate((a, b) => a + ',' + b);
 Console.WriteLine("Concatenated String: {0}", concta);
 
 Students.studentMethod();
+string[] countries1 = { "India", "Australia", "USA", "Argentina", "Peru", "China" };
+IEnumerable<string> resulta = countries1.Where(x => x.StartsWith("A"));
+foreach (var country in resulta)
+{
+    Console.WriteLine(country);
+}
+string[] countriesp = { "India", "Australia", "USA", "Argentina", "Peru", "China" };
+IEnumerable<string> resultp = from x in countriesp
+                             where x.StartsWith("A")
+                             select x;
+IEnumerable<string> resultw = from x in countriesp
+                              where x.StartsWith("A")
+                             where x.EndsWith("s")
+                             select x;
+foreach (var country in resultp)
+{
+    Console.WriteLine(country);
+}
 
 
-  
-    
-   
+
+
+
 
 
 
